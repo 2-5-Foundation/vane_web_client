@@ -61,7 +61,16 @@ export default function Navbar() {
             {/* History */}
             <button className="text-slate-600 hover:text-slate-900">History</button>
             {/* Settings */}
-            <button className="text-slate-600 hover:text-slate-900">Settings</button>
+            <button
+              onClick={() => router.push('/settings')}
+              className={`${
+                pathname === '/settings' 
+                  ? 'text-slate-900 font-medium' 
+                  : 'text-slate-600 hover:text-slate-900'
+              }`} 
+             >
+              Settings
+             </button>
           </div>
         </div>
         
